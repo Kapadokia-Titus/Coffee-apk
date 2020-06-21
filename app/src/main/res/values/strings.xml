@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Coffee</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="slogan">Coffee for the Mind</string>
+    <string name="landing_intro">Thanks so much for checking out our app! We\'re committed to the absolute best coffee experience around, and we hope you are too.</string>
+    <string name="get_started">Get Started</string>
+</resources>
