@@ -27,7 +27,7 @@ public class FeaturedFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.featured_fragment, container, false);
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_featured);
+        mRecyclerView =view.findViewById(R.id.recycler_featured);
         mLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
 

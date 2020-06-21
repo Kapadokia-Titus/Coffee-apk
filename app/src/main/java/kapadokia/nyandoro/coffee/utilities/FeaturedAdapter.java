@@ -24,9 +24,9 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.ItemVi
 
         public ItemViewHolder(View v) {
             super(v);
-            mItemDesc = (TextView) v.findViewById(R.id.item_desc);
-            mItemName = (TextView) v.findViewById(R.id.item_name);
-            mImageView = (ImageView) v.findViewById(R.id.item_image);
+            mItemDesc = v.findViewById(R.id.item_desc);
+            mItemName =  v.findViewById(R.id.item_name);
+            mImageView =  v.findViewById(R.id.item_image);
         }
     }
 

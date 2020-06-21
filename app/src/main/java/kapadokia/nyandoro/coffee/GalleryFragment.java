@@ -22,7 +22,7 @@ public class GalleryFragment extends Fragment {
 
         ArrayList<String> imageUrls = new ArrayList<String>();
 
-        GridView gridGallery = (GridView) view.findViewById(R.id.grid_gallery);
+        GridView gridGallery = view.findViewById(R.id.grid_gallery);
         GalleryAdapter gridAdapter = new GalleryAdapter(getContext(), R.layout.gallery_item_layout, imageUrls);
         gridGallery.setAdapter(gridAdapter);
 
