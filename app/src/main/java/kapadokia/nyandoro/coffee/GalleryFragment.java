@@ -21,6 +21,15 @@ public class GalleryFragment extends Fragment {
         View view = inflater.inflate(R.layout.gallery_fragment, container, false);
 
         ArrayList<String> imageUrls = new ArrayList<String>();
+        imageUrls.add("bag.jpg");
+        imageUrls.add("beans.jpg");
+        imageUrls.add("granola.jpg");
+        imageUrls.add("ground.jpg");
+        imageUrls.add("bagel.jpg");
+        imageUrls.add("table.jpg");
+        imageUrls.add("trail.jpg");
+        imageUrls.add("coffee.jpg");
+
 
         GridView gridGallery = view.findViewById(R.id.grid_gallery);
         GalleryAdapter gridAdapter = new GalleryAdapter(getContext(), R.layout.gallery_item_layout, imageUrls);

@@ -3,8 +3,8 @@ package kapadokia.nyandoro.coffee;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -33,9 +33,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if(newFragment != null){
-                androidx.fragment.app.FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.content, new CompanyFragment())
+                FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
+                fragmentManager.replace(R.id.content,  newFragment)
                         .commit();
                 return true;
             }
@@ -50,12 +49,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation =  findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        androidx.fragment.app.FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.content, new FeaturedFragment())
+       FragmentTransaction fragmentManager= getSupportFragmentManager().beginTransaction();
+                fragmentManager.replace(R.id.content, new FeaturedFragment())
                 .commit();
 
     }
