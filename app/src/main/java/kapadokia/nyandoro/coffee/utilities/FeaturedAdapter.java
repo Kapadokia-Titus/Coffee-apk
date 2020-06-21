@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import kapadokia.nyandoro.coffee.R;
@@ -47,6 +49,10 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.ItemVi
     public void onBindViewHolder(ItemViewHolder holder, int position) {
         holder.mItemDesc.setText(mItems.get(position).getDescription());
         holder.mItemName.setText(mItems.get(position).getName());
+
+        Picasso.get().load(UrlHelper.BaseUrl+mItems.get(position).getImageUrl())
+                .error(R.drawable.beans)
+                .into(holder.mImageView);
     }
 
     @Override
