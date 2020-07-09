@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import kapadokia.nyandoro.coffee.utilities.GalleryAdapter;
 
-public class                                                                                                                                                                                                                                                        GalleryFragment extends Fragment {
+public class GalleryFragment extends Fragment {
 
     @Nullable
     @Override
